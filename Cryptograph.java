@@ -9,17 +9,17 @@ import java.security.Key;
 
 public class Cryptograph{
 
-    JFrame f1 = new JFrame("Encrypter Decryptor tool");
-    JFrame f2 = new JFrame("List Of Files Selected");
-    JFrame f3 = new JFrame("Enter Password");
-    JButton b1 = new JButton("Encrypt");
-    JButton b2 = new JButton("Decrypt");
-    JTextArea ta = new JTextArea();
-    JTextField tf = new JTextField(20);
-    JFileChooser fileChooser = new JFileChooser();
-    File selectedFile;
-    String check;
-    Font font = new Font("Roboto",Font.BOLD,20);
+    private JFrame f1 = new JFrame("Encrypter Decryptor tool");
+    private JFrame f2 = new JFrame("List Of Files Selected");
+    private JFrame f3 = new JFrame("Enter Password");
+    private JButton b1 = new JButton("Encrypt");
+    private JButton b2 = new JButton("Decrypt");
+    private JTextArea ta = new JTextArea();
+    private JTextField tf = new JTextField(20);
+    private JFileChooser fileChooser = new JFileChooser();
+    private File selectedFile;
+    private String check;
+    private Font font = new Font("Roboto",Font.BOLD,20);
 
     Cryptograph()
     {
@@ -122,8 +122,6 @@ public class Cryptograph{
 
         JLabel l1 = new JLabel("Enter your Password !!");
         JLabel l2 = new JLabel("Re-Enter your Password !!");
-
-        
         JButton proceedB = new JButton("PROCCED");
 
         //proceed button functionality
