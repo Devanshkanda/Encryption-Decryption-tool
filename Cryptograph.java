@@ -1,19 +1,17 @@
+import CryptPackage.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.security.Key;
 
 public class Cryptograph{
 
     private JFrame f1 = new JFrame("Encrypter Decryptor tool");
     private JFrame f2 = new JFrame("List Of Files Selected");
     private JFrame f3 = new JFrame("Enter Password");
-    private JButton b1 = new JButton("Encrypt");
-    private JButton b2 = new JButton("Decrypt");
+    private JButton Encryptionbttn = new JButton("Encrypt");
+    private JButton Decryptionbttn = new JButton("Decrypt");
     private JTextArea ta = new JTextArea();
     private JTextField tf = new JTextField(20);
     private JFileChooser fileChooser = new JFileChooser();
@@ -64,7 +62,7 @@ public class Cryptograph{
 
             public void actionPerformed(ActionEvent ae)
             {
-
+                check = "E";
                 setPasswordWindow();
                 f2.setVisible(false);
             }
@@ -137,7 +135,12 @@ public class Cryptograph{
 
             int key = Integer.parseInt(text);
             System.out.println("Password after converting in int : " + key);
-            Encrypt(selectedFile , key);
+
+            if(check == "E")
+            new EncryptFile(selectedFile , key);
+
+            else
+            new DecryptFile(selectedFile, key);
 
             }catch(NumberFormatException ex)
             {
@@ -170,50 +173,16 @@ public class Cryptograph{
         
     }
 
-
-    void Encrypt(File file , int key)
-    {
-        try
-        {
-            FileInputStream fis = new FileInputStream(file);
-            byte data[] = new byte[fis.available()];
-            fis.read(data);
-            int i=0;
-            for(byte b:data)
-            {
-                data[i] = (byte) (b^key);
-                System.out.println(b);
-                i++;
-            }
-
-            FileOutputStream fos = new FileOutputStream(file);
-            fos.write(data);
-            fos.close();
-            fis.close();
-
-            if(check == "E")
-            JOptionPane.showMessageDialog(null,"Encryption Completed");
-
-            else
-            JOptionPane.showMessageDialog(null,"Decryption Completed");
-
-
-        }catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
-
     void buttonProperties()  //first window button functionality
     {
-        b1.setBounds(40,50,80,20);
-        b2.setBounds(40,100,80,20);
-        f1.add(b1);
-        f1.add(b2);
-        b1.setFont(font);
-        b2.setFont(font);
+        Encryptionbttn.setBounds(40,50,80,20);
+        Decryptionbttn.setBounds(40,100,80,20);
+        f1.add(Encryptionbttn);
+        f1.add(Decryptionbttn);
+        Encryptionbttn.setFont(font);
+        Decryptionbttn.setFont(font);
 
-        b1.addActionListener(new ActionListener(){
+        Encryptionbttn.addActionListener(new ActionListener(){
 
             public void actionPerformed(ActionEvent e){
 
@@ -241,7 +210,7 @@ public class Cryptograph{
         });
 
         //decrypt button
-        b2.addActionListener(new ActionListener(){
+        Decryptionbttn.addActionListener(new ActionListener(){
 
             public void actionPerformed(ActionEvent e){
 
