@@ -35,7 +35,7 @@ Now a new password window will open. Type here the password
 ![image](https://user-images.githubusercontent.com/101200047/176748467-31b425e6-90a9-4ad9-8fc8-85f33e1407bb.png)
 
 
-Click on "Procced". A pop-up Conformation window will open with message "Encryption Completed" 
+Click on "Procced". A pop-up Confirmation window will open with message "Encryption Completed" 
 ![image](https://user-images.githubusercontent.com/101200047/176748744-970414a8-b15a-4cbf-a822-c843b83e495a.png)
 
 
