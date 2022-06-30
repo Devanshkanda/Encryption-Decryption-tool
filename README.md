@@ -42,5 +42,8 @@ Click on "Procced". A pop-up Conformation window will open with message "Encrypt
 Now the selected file is converted or altered into a form that is not readable.
 
 repeat the Same Steps for decrypting the encrypted file.
+
+![image](https://user-images.githubusercontent.com/101200047/176751060-7f9e118e-9fd0-4f63-a3c7-669543ba01b0.png)
+
 Please note : Type correct password.
 
