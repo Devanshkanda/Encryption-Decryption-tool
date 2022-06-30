@@ -1,12 +1,15 @@
 # Encryption-Decryption-tool
 This is a Encryption/Decryption Software purely made in JAVA through which we can encrypt or decrypt images , text files , mp4 files , docx etc.
 
-Run the Cryptograph.java through command line
-![image](https://user-images.githubusercontent.com/101200047/176746503-f5f83be9-8310-4b2e-8957-a546231fd165.png)
-
 
 IMPORTANT:-
 THIS IS A BETA VERSION , ONLY TRY ON A DUMMY FILE OR TEST FILES , DO NOT TEST IN YOUR IMPORTANT DATA FILES.
+
+
+
+Run the Cryptograph.java through command line
+![image](https://user-images.githubusercontent.com/101200047/176746503-f5f83be9-8310-4b2e-8957-a546231fd165.png)
+
 
 
 type "java Cryptograph" in the cmd/terminal
